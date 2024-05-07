@@ -6,7 +6,8 @@ import { signUpGetController, signUpPostController, signUpStyleGetController, lo
 const PORT = 3001;
 const HOST = "127.0.0.1";
 const HTML_FILES = {
-'/lastcomment.html': './public/template/lastcomment.html'};
+  '/index.html': './public/html/index.html',
+  '/lastcomment.html': './public/template/lastcomment.html'}
 
 const myServer = new VanillaApp();
 
