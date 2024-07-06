@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="/website/homepage/css/normalize.css">
+    <link rel="stylesheet" href="/website/homepage/css/style.css">
+    <script src="https://unpkg.com/htmx.org@1.4.1/dist/htmx.min.js"></script>
+    <script src="/website/homepage/validate.js" defer></script>
+    <script src="/website/homepage/fetch.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="menu">
+            <ul class="menu-big">
+                <li>
+                    <a href="../signup/index.html" class="menu-itms">Регистрация</a>
+                </li>
+                <li>
+                    <a href="../login/index.html" class="menu-itms">Вход</a>
+                </li>
+                <li>
+                    <a href="../logout/index.html" class="menu-itms">Выход</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div id="auth-check" hx-get="/check-auth" hx-trigger="load" hx-swap="none"></div>
+        <div id="form-container"></div>
+        <% if (hasSession) { %>
+        <section class="container" name="form">
+            <form class="form section-form" name="form" novalidate>
+                <div class="form__field-container">
+                    <label class="form__field section-form-lbl">
+                        <span class="form__label">Комментарий:</span>
+                        <input type="text" id="input__comment" class="form__type-input section-form-inpt" placeholder="Example123" required>
+                    </label>
+                    <span class="form__error input__comment-error" id="comment-error" aria-live="polite"></span>
+                </div>
+                <button type="submit" class="button section-form-btn" aria-describedby="empty-error">Добавить комментарий</button>
+                <span class="form__empty-error" id="empty-error" aria-live="assertive"></span>
+            </form>
+        </section>
+        <% } else { %>
+            <p class="no-access">Войдите в систему, чтобы увидеть контент.</p>
+        <% } %>
+        <div id="table-container">
+            <table class="my-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Комментарий</th>
+                        <th>Время добавления</th>
+                        <th>Имя пользователя</th>
+                        <th>Опции</th>
+                    </tr>
+                </thead>
+            </table>
+            <table class="my-table"
+                hx-get="/table"
+                hx-trigger="revealed"
+                hx-swap="innerHTML">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

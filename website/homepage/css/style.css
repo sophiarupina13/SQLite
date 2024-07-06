@@ -1,0 +1,249 @@
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    color: #142251;
+    --special-color: #989EB1;
+    font-style: normal;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 400;
+    font-size: 62.5%;
+}
+
+:root ::selection{
+    background-color: #142251;
+    color: white;
+}
+
+body {
+    background: #FFF;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+h1 {
+    /* font-size: 4rem; */
+    font-size: calc(32px + (68 + 68 * 0.7) * ((100vw - 320px) / 1920));
+    line-height: 85%; /* 34px */
+    font-weight: 400;
+    letter-spacing: -0.16rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    display: block;
+}
+
+h2 {
+    font-size: calc(32px + (68 + 68 * 0.7) * ((100vw - 320px) / 1920));
+    line-height: 85%; /* 34px */
+    font-weight: 400;
+    letter-spacing: -0.16rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: calc(20px + (10 + 10  * 0.7) * ((100vw - 320px) / 1920));
+    font-weight: 400;
+    line-height: 90%; /* 18px */
+    letter-spacing: -0.08rem;
+}
+
+p {
+    font-size: calc(15px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
+    line-height: 100%; /* 14px */
+    letter-spacing: -0.056rem;
+}
+
+button {
+    font-size: calc(14px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
+}
+
+a {
+    font-size: calc(15px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover{
+    transform: scale(1.1, 1.1);
+    background-color: #cad8e4;
+}
+
+a:active {
+    color: #000000;
+}
+
+.header {
+    padding: 1.5rem 0rem;
+    position: sticky;
+    top: 0px;
+    background-color: #FFF;
+    z-index: 1;
+}
+
+.menu {
+    border: none;
+    background-color:#FFF;
+}
+
+.menu-big {
+    display: flex;
+    column-gap: 5rem;
+    justify-content: center;
+}
+
+.main {
+    border-top: solid 1px #E0E2E8;
+    padding: 2rem;
+}
+
+.no-access {
+    font-size: calc(10px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    font-size: 1.8rem; 
+    color: #000000;
+    text-align: center;
+}
+
+th {
+    padding: 1.2rem;
+    color: #000000;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background-color: #f2f2f2;
+    font-size: 2rem;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 7%; }
+th:nth-child(2), td:nth-child(2) { width: 30%; }
+th:nth-child(3), td:nth-child(3) { width: 20%; }
+th:nth-child(4), td:nth-child(4) { width: 15%; }
+th:nth-child(5), td:nth-child(5) { width: 20%; }
+
+.edit-btn {
+    border: 1px solid;
+    border-color: #000000;
+    background: #f2f2f2;
+    margin-top: 1.5rem;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 400;
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+}
+
+.delete-btn {
+    border: 1px solid;
+    border-color: #000000;
+    background: #f2f2f2;
+    margin-top: 1.5rem;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 400;
+    padding: 0.2rem 0.5rem;
+    font-size: 1rem;
+}
+
+.footer {
+    color: #000000;
+    display: flex;
+    justify-content: end;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.section-form {
+    display: none;
+}
+
+.section-form-inpt {
+    margin-bottom: 0.7rem;
+    height: 1.5rem;
+    flex: 2;
+}
+
+.section-form-lbl {
+    margin-bottom: 0.2rem;
+}
+
+.form__label {
+    flex: 1; 
+    margin-right: 1rem; 
+    font-size: 1.8rem;
+    color: black;
+}
+
+.form__type-checkbox-title {
+    color: black;
+    font-size: 1.5rem;
+}
+
+#checkbox-error {
+    margin-top: 0.5rem;
+}
+
+.section-form-btn {
+    border: 1px solid;
+    border-color: #000000;
+    background: #f2f2f2;
+    margin-top: 1.5rem;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 400;
+    padding: 1.3rem 4rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    font-size: 1.7rem;
+}
+
+.form__type-input {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 1.5rem;
+    padding: 0.8rem 0.1rem;
+}
+
+  /* Для изменения цвета обводки элемента формы при валидации */
+.form__type-input-error {
+    border: 1px solid #FF8630;
+    background-color: rgb(255 134 48 / 0.1);
+}
+
+  /* Для отображения span-элемента с ошибкой */
+.form__error-active {
+    color: #FF8630;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.7rem;
+    margin-top: -0.5rem;
+}
+
+.form__empty-error {
+    color: #FF8630;
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 2rem;
+    margin-top: -1.7rem;
+}
+
+  /* Для блокировки кнопки submit */
+.button-inactive {
+    cursor: default;
+    color: rgb(104, 104, 104);
+    border-color: rgb(104, 104, 104);
+}

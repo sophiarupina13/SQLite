@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="/website/login/style.css">
+  <script src="/website/login/validate.js" defer></script>
+  <script src="/website/login/fetch.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Вход</h1>
+  </header>
+  <main>
+    <section class="container" name="form">
+      <form class="form section-form" id="loginForm" name="form" novalidate>
+      <div class="form__field-container">
+        <label class="form__field section-form-lbl">
+          <span class="form__label">Введите имя:</span>
+          <input type="text" id="input__name" class="form__type-input section-form-inpt" placeholder="Иван" pattern="^[a-zA-Zа-яА-ЯЁё\s\-]+$" data-error-message="Разрешены символы латиницы, кириллицы, знаки дефиса и пробелы." aria-describedby="name-error" required>
+        </label>
+        <span class="form__error input__name-error" id="name-error" aria-live="polite">
+        </span>
+      </div>
+      <div class="form__field-container">
+        <label class="form__field section-form-lbl">
+          <span class="form__label">Введите пароль:</span>
+          <input type="password" id="input__password" class="form__type-input section-form-inpt" placeholder="Example123" required>
+        </label>
+        <span class="form__error input__password-error" id="password-error" aria-live="polite">
+        </span>
+      </div>
+      <div class="form__field-container">
+        <label class="form__checkbox-label">
+            <input type="checkbox" id="input__checkbox" class="form__type-input form__type-checkbox" checked aria-describedby="checkbox-error" required/>
+            <span class="form__type-checkbox-title">
+            Принимаю все куки
+            </span>
+        </label>
+        <span class="form__error input__checkbox-error" id="checkbox-error" aria-live="polite"></span>
+        </div>
+      <button type="submit" id="loginButton" class="button section-form-btn" aria-describedby="empty-error">
+        Войти
+      </button>
+      <span class="form__empty-error" id="empty-error" aria-live="assertive">
+      </span>
+    </form>
+    <div id="greeting" class="greeting" style="display: none;"></div>
+    </section>
+  </main>
+</body>
+</html>

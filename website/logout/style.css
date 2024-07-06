@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  color: #000000;
+  font-style: normal;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background: #ffffff;
+}
+
+:root ::selection{
+  background-color: #858585;
+  color: #ffffff;
+}
+
+body {
+  background: #FFF;
+}
+
+.container {
+  padding: 2rem 2rem;
+}
+
+h1 {
+  font-size: calc(20px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
+  margin-bottom: 2rem;
+}
+
+.button {
+  border: 1px solid;
+  padding: 0.5rem 5rem;
+  border-radius: 0.3rem;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

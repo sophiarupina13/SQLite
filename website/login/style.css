@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  color: #000000;
+  font-style: normal;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background: #ffffff;
+}
+
+:root ::selection{
+  background-color: #858585;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: calc(20px + (10 + 10 * 0.7) * ((100vw - 320px) / 1920));
+}
+
+body {
+  background: #FFF;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #E0E2E8;
+}
+
+.container {
+  padding: 2rem 2rem;
+}
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-form-inpt {
+  margin-bottom: 0.7rem;
+  height: 1.5rem;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.section-form-lbl {
+  margin-bottom: 0.2rem;
+}
+
+.form__label {
+  margin-right: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.form__type-input {
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.section-form-btn {
+  margin-top: 2rem;
+  border: 1px solid;
+  padding: 0.7rem 5rem;
+  border-radius: 0.3rem;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Для изменения цвета обводки элемента формы при валидации */
+.section-form-inpt-error {
+  border: 1px solid #FF8630;
+  background-color: rgb(255 134 48 / 0.1);
+}
+
+/* Для отображения span-элемента с ошибкой */
+.form__error-active {
+  color: #FF8630;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.7rem;
+  margin-top: -0.5rem;
+}
+
+.form__empty-error {
+  color: #FF8630;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+/* Для блокировки кнопки submit */
+.button-inactive {
+  cursor: default;
+  background-color: rgb(211 211 211 / 0.6);
+}
+
+.input__checkbox-error {
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+}

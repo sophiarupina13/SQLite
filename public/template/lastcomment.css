@@ -1,0 +1,30 @@
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  color: #142251;
+  --special-color: #989EB1;
+  font-style: normal;
+  font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+  font-weight: 400;
+  font-size: 62.5%;
+}
+
+:root ::selection{
+  background-color: #142251;
+  color: white;
+}
+
+body {
+  background: #30fd70;
+}
+
+h2 {
+  color: rgb(25, 60, 95);
+}

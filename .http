@@ -1,0 +1,84 @@
+GET / HTTP/1.1
+Host: 127.0.0.1:3001
+
+###
+POST /comments HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/json
+
+{
+    "comments": [
+        {"comment": "Great work!", "name": "John Doe"},
+        {"name": "Alissa", "comment": "Not bad"}
+    ]
+}
+
+###
+POST /comments HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/json
+
+{
+    {"name": "John Doe", "comment": "Great work!"},
+    {"name": "Alissa", "comment": "Not bad"}
+}
+
+###
+GET /comments?page=2&limit=3 HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/json
+
+###
+GET /comments/6 HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/json
+
+###
+DELETE /comments/5 HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/json
+
+###
+PATCH /comments/6 HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/json
+
+    {"comment": "New comment"}
+
+###
+GET /stats HTTP/1.1
+Host: 127.0.0.1:3001
+
+###
+GET /lastcomment HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: text/html
+
+###
+GET /signup HTTP/1.1
+Host: 127.0.0.1:3001
+
+###
+POST /signup HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/x-www-form-urlencoded
+
+name=John&password=example123
+
+###
+GET /login HTTP/1.1
+Host: 127.0.0.1:3001
+
+###
+POST /login HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/x-www-form-urlencoded
+
+name=John&password=example123
+
+###
+POST /logout HTTP/1.1
+Host: 127.0.0.1:3001
+Content-Type: application/x-www-form-urlencoded
+
+session_id=your_session_id_here
